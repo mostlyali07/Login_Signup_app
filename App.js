@@ -24,7 +24,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const LogINNode = () => {
+const LogIn = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -48,7 +48,9 @@ const LogINNode = () => {
         </View>
         <View
           style={{
-            backgroundColor: 'white', marginTop: '10',
+            backgroundColor: 'white',
+            marginTop: -26,
+            borderRadius: 20,
           }}>
           <Text style={[styles.highlightTwo]}>Login</Text>
           <TextInput
@@ -68,7 +70,7 @@ const LogINNode = () => {
           <View style={styles.ButtonOne}>
             <Button title="login" color="blue" borderRadius="50" />
           </View>
-          <Text  style={styles.TextBottom}>Create an account? Sign Up</Text>
+          <Text style={styles.TextBottom}>Create an account? Sign Up</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -112,11 +114,11 @@ const styles = StyleSheet.create({
     marginLeft: 120,
     marginRight: 120,
   },
-  TextBottom:{
+  TextBottom: {
     fontWeight: '600',
     color: 'black',
     textAlign: 'center',
   },
 });
 
-export default LogINNode;
+export default LogIn;
